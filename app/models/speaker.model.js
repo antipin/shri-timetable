@@ -7,6 +7,7 @@ define(function(require){
         defaults: function() {
             return {
                 name: "",
+                photo: "",
                 description: ""
             }
         },

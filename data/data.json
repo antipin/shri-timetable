@@ -1,0 +1,421 @@
+{
+    "lectures": [
+        {
+            "title": "Общий цикл разработки",
+            "description": "",
+            "date": "15.09.2012 12:00-13:00",
+            "speaker": "Михаил Трошев",
+            "link_presentation": "http://yadi.sk/d/VDsJ4ZUBiq6u",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/yb1ix4ck06.4829",
+            "link_video_download": "http://yadi.sk/d/Lr0Y4WO606jTc",
+            "link_github": ""
+        },
+        {
+            "title": "Системы ведения задач",
+            "description": "Сергей Бережной",
+            "date": "15.09.2012 13:00-14:00",
+            "speaker": "",
+            "link_presentation": "http://yadi.sk/d/D5xTwoIciq6c",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Wiki",
+            "description": "",
+            "date": "15.09.2012 14:00-15:00",
+            "speaker": "Сергей Бережной",
+            "link_presentation": "http://yadi.sk/d/7F9PuECdiq6G",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Командная строка Unix",
+            "description": "",
+            "date": "18.09.2012 19:00-20:00",
+            "speaker": "Виктор Ашик",
+            "link_presentation": "http://yadi.sk/d/3N0d6h9rlRA8",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/qxv95xwi4q.4820",
+            "link_video_download": "http://yadi.sk/d/O5OBYxHwnGTw",
+            "link_github": ""
+        },
+        {
+            "title": "Редакторы кода/Средства разработки",
+            "description": "",
+            "date": "18.09.2012 20:00-21:00",
+            "speaker": "Вячеслав Олиянчук",
+            "link_presentation": "",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/h4kt5t9a07.4101",
+            "link_video_download": "http://yadi.sk/d/f3CYmlG3nGSC",
+            "link_github": "https://github.com/yandex-shri/lectures/blob/master/05-editors.md"
+        },
+        {
+            "title": "Браузеры",
+            "description": "",
+            "date": "20.09.2012 19:00-20:00",
+            "speaker": "Георгий Мостоловица",
+            "link_presentation": "http://yadi.sk/d/-VjNYqjTqTca",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/hvbwev4zfw.3829",
+            "link_video_download": "http://yadi.sk/d/NMOTG5lEqZdM",
+            "link_github": ""
+        },
+        {
+            "title": "Системы контроля версий",
+            "description": "",
+            "date": "20.09.2012 20:00-21:00",
+            "speaker": "Сергей Сергеев",
+            "link_presentation": "http://yadi.sk/d/a7aY8YXjr-hs",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/udxty33q8y.4106",
+            "link_video_download": "http://yadi.sk/d/Ujsir9QwqZeA",
+            "link_github": ""
+        },
+        {
+            "title": "Тестирование",
+            "description": "",
+            "date": "22.09.2012 12:00-13:00",
+            "speaker": "Марина Широчкина",
+            "link_presentation": "http://yadi.sk/d/W7lDOetHqTWC",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/xc8acgglq0.1103",
+            "link_video_download": "http://yadi.sk/d/oNwA5A9NqZcc",
+            "link_github": ""
+        },
+        {
+            "title": "Развертывание верстки",
+            "description": "",
+            "date": "22.09.2012 13:00-14:00",
+            "speaker": "Павел Пушкарев",
+            "link_presentation": "http://yadi.sk/d/N4FYrhS3qTSI",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/eh1gwaf93n.4603",
+            "link_video_download": "http://yadi.sk/d/7DVNQDK9qZbq",
+            "link_github": ""
+        },
+        {
+            "title": "HTTP-протокол",
+            "description": "",
+            "date": "22.09.2012 14:00-15:00",
+            "speaker": "Алексей Бережной",
+            "link_presentation": "http://yadi.sk/d/waP8x8maqTKM",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/pnqglhihpo.3500",
+            "link_video_download": "http://yadi.sk/d/Tr1gzBsOqZao",
+            "link_github": ""
+        },
+        {
+            "title": "XML",
+            "description": "",
+            "date": "24.09.2012 18:00-19:00",
+            "speaker": "Сергей Пузанков",
+            "link_presentation": "http://yadi.sk/d/PLpXM88frhSW",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/o57iftgrzi.5100/",
+            "link_video_download": "http://yadi.sk/d/LyYgXl_C0-6oI",
+            "link_github": ""
+        },
+        {
+            "title": "XPath",
+            "description": "",
+            "date": "24.09.2012 19:00-20:00",
+            "speaker": "Сергей Пузанков",
+            "link_presentation": "http://yadi.sk/d/PLpXM88frhSW",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/jg4wxwp75k.4927/",
+            "link_video_download": "http://yadi.sk/d/cTZ1D0UU0-6v6",
+            "link_github": ""
+        },
+        {
+            "title": "XSLT",
+            "description": "",
+            "date": "24.09.2012 20:00-21:00",
+            "speaker": "Сергей Пузанков",
+            "link_presentation": "http://yadi.sk/d/PLpXM88frhSW",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/kaddd0p1bz.4613/",
+            "link_video_download": "http://yadi.sk/d/0KxriIDd0-7Ni",
+            "link_github": ""
+        },
+        {
+            "title": "Механизм работы браузера",
+            "description": "",
+            "date": "25.09.2012 19:00-20:00",
+            "speaker": "Роман Комаров",
+            "link_presentation": "http://yadi.sk/d/wo1LfOGatbOM",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Кеширование на клиенте и сервере",
+            "description": "",
+            "date": "25.09.2012 20:00-21:00",
+            "speaker": "Егор Львовский",
+            "link_presentation": "http://yadi.sk/d/EEEp53YstbNo",
+            "link_video_online": "http://static.video.yandex.ru/lite/ya-events/7c5917p3z8.4920/",
+            "link_video_download": "http://yadi.sk/d/vTmZ5k1a0-74y",
+            "link_github": ""
+        },
+        {
+            "title": "Безопасность веб-приложений",
+            "description": "",
+            "date": "27.09.2012 19:00-20:00",
+            "speaker": "Тарас Иващенко",
+            "link_presentation": "http://yadi.sk/d/bo1OpD2Av3vC",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Языки программирования",
+            "description": "",
+            "date": "27.09.2012 20:00-21:00",
+            "speaker": "Алексей Воинов",
+            "link_presentation": "http://yadi.sk/d/LRpqvLuIv4UI",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "JS. Базовые знания",
+            "description": "",
+            "date": "29.09.2012 12:00-13:00",
+            "speaker": "Михаил Давыдов",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Транспорт. AJAX",
+            "description": "",
+            "date": "29.09.2012 13:00-14:00",
+            "speaker": "Михаил Давыдов",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "JS. Асинхронность",
+            "description": "",
+            "date": "29.09.2012 14:00-15:00",
+            "speaker": "Михаил Давыдов",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Отладка кода",
+            "description": "",
+            "date": "2.10.2012 19:00-20:00",
+            "speaker": "Алексей Андросов",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Клиентская оптимизация",
+            "description": "",
+            "date": "4.10.2012 19:00-20:00",
+            "speaker": "Иван Карев",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Profiler",
+            "description": "",
+            "date": "4.10.2012 20:00-21:00",
+            "speaker": "Михаил Корепанов",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Регулярные выражения",
+            "description": "",
+            "date": "6.10.2012 12:00-13:00",
+            "speaker": "Максим Ширшин",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "CSS",
+            "description": "",
+            "date": "6.10.2012 13:00-14:00",
+            "speaker": "Михаил Трошев",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Фреймворки. Обзор",
+            "description": "",
+            "date": "9.10.12 19:00-20:00",
+            "speaker": "Алексей Андросов",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "jQuery",
+            "description": "",
+            "date": "9.10.12 20:00-21:00",
+            "speaker": "Алексей Бережной",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "БЭМ (2 лекции)",
+            "description": "",
+            "date": "11.10.2012 19:00-21:00",
+            "speaker": "Владимир Варанкин",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Шаблонизаторы",
+            "description": "",
+            "date": "13.10.2012 12:00-13:00",
+            "speaker": "Сергей Бережной",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Дизайн",
+            "description": "",
+            "date": "13.10.2012 13:00-14:00",
+            "speaker": "Константин Горский",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        },
+        {
+            "title": "Дизайн глазами разработчика",
+            "description": "",
+            "date": "13.10.2012 14:00-15:00",
+            "speaker": "Михаил Трошев",
+            "link_presentation": "",
+            "link_video_online": "",
+            "link_video_download": "",
+            "link_github": ""
+        }
+    ],
+    "speakers": [
+        {
+            "name": "Алексей Андросов",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Алексей Бережной",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Алексей Воинов",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Виктор Ашик",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Владимир Варанкин",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Вячеслав Олиянчук",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Георгий Мостоловица",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Егор Львовский",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Иван Карев",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Константин Горский",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Максим Ширшин",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Марина Широчкина",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Михаил Давыдов",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Михаил Корепанов",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Михаил Трошев",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Павел Пушкарев",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Роман Комаров",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Сергей Бережной",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Сергей Пузанков",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Сергей Сергеев",
+            "photo": "",
+            "description": ""
+        },
+        {
+            "name": "Тарас Иващенко",
+            "photo": "",
+            "description": ""
+        }
+    ]
+}
