@@ -7,7 +7,7 @@ function buildScriptPath(path, version) {
         chunk_version = version != undefined ? "-" + version : "",
         path = chunk_path + chunk_version;
 
-    return App.settings.debug ? path + ".min" : path;
+    return App.settings.debug ? path : path + ".min";
 }
 
 
@@ -25,22 +25,35 @@ require.config({
     paths: {
 
         // Libs
-        "jquery":          buildScriptPath("../lib/jquery/jquery",           "1.8.2"),
-        "lodash":          buildScriptPath("../lib/backbone/lodash",         "0.8.2"),
-        "backbone":        buildScriptPath("../lib/backbone/backbone",       "0.9.2"),
-        "handlebars":      buildScriptPath("../lib/handlebars/handlebars",   "1.0.rc.1"),
-        "text":            buildScriptPath("../lib/require/text",            "2.0.3"),
-        "bootstrap":       buildScriptPath("../lib/bootstrap/js/bootstrap"),
+        "text":                     buildScriptPath("../lib/require/text",                           "2.0.3"),
+        "jquery":                   buildScriptPath("../lib/jquery/jquery",                          "1.8.2"),
+        "handlebars":               buildScriptPath("../lib/handlebars/handlebars",                  "1.0.rc.1"),
+        "lodash":                   buildScriptPath("../lib/backbone/lodash",                        "0.8.2"),
+        "backbone-raw":             buildScriptPath("../lib/backbone/backbone-raw",                  "0.9.2"),
+        "backbone-localstorage":    buildScriptPath("../lib/backbone/backbone-localstorage",         "1.0"),
+        "backbone":                 buildScriptPath("../lib/backbone/backbone-with-plugins"),
+
+        // jQuery plugins
+        "bootstrap":                buildScriptPath("../lib/bootstrap/js/bootstrap"),
 
         // App
-        "app":             "app"
+        "app":             "app",
+        "utils":           "utils/common"
     },
 
     shim: {
 
-        "backbone": {
-            deps: ["lodash", "jquery" ],
+        "backbone-raw": {
+            deps: ["lodash", "jquery"],
             exports: "Backbone"
+        },
+
+        "backbone-localstorage": ["backbone-raw"],
+
+        // Backbone with plugins
+        "backbone": {
+            deps: ["backbone-raw", "backbone-localstorage"],
+            exports: 'Backbone'
         },
 
         "handlebars": {
