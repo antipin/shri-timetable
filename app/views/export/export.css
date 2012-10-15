@@ -1,1 +1,4 @@
 .b-export {}
+.b-export textarea.export-json {
+    display: none;
+}
