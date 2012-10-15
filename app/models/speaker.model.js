@@ -15,6 +15,13 @@ define(function(require){
 
         url: function() {
             return 'speakers/' + this.get("id");
+        },
+
+
+        toExportableJSON: function() {
+            var result = this.toJSON();
+            delete result.id;
+            return result;
         }
 
     });

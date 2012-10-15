@@ -16,9 +16,7 @@ define(function(require){
         className: 'row-fluid b-import',
 
 
-        initialize: function() {
-            console.log('import init');
-        },
+        initialize: function() {},
 
 
         render: function() {
@@ -48,8 +46,6 @@ define(function(require){
                 } catch (e) {
                     alert("Данные имеют неверный формат.");
                 }
-
-                console.log(jsonData);
 
                 if (jsonData != "") {
 

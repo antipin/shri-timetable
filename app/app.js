@@ -11,8 +11,6 @@ define(function(require){
 
         // Models
         cls_mUser = require("models/user.model"),
-        cls_mLecture = require("models/lecture.model"),
-        cls_mSpeaker = require("models/speaker.model"),
 
         // Collections
         cls_cLectures = require("collections/lectures.collection"),

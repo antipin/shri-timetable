@@ -22,15 +22,24 @@ define(function(require) {
         },
 
 
-        export: function(data) {
-            return this.toJSON();
+        export: function() {
+            var result = [];
+            this.each(function(model) {
+                if (_.isFunction(model.toExportableJSON)) {
+                    result.push(model.toExportableJSON());
+                }
+                else {
+                    result.push(model.toJSON());
+                }
+            }, this);
+            return result;
         },
 
 
         save: function(options) {
             // Save all models
             this.each(function(model) {
-                model.save();
+                model.save(options);
             }, this);
         },
 

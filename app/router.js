@@ -1,7 +1,6 @@
 define(function(require){
 
     var
-        $ = require('jquery'),
         _ = require('lodash'),
         Backbone = require('backbone'),
 
@@ -29,22 +28,10 @@ define(function(require){
             "lectures":                  "rLectures",
             "lectures/:lecture":         "rLecture",
             "import":                    "rImport",
-            "export":                    "rExport",
-            "rml":               "rTestr"
-        },
-
-        rTestr: function() {
-            App.cLectures.destroy();
-            App.cSpeakers.destroy();
+            "export":                    "rExport"
         },
 
         rLectures: function(){
-            console.log('rLecture');
-
-        },
-
-        rLectures: function(){
-            console.log('rLectures');
             App.vMain.vContentArea.setContent(cls_vLectures);
         },
 
@@ -53,12 +40,10 @@ define(function(require){
         },
 
         rImport: function(){
-            console.log('rImport');
             App.vMain.vContentArea.setContent(cls_vImport);
         },
 
         rExport: function(){
-            console.log('rExport');
             App.vMain.vContentArea.setContent(cls_vExport);
         }
 

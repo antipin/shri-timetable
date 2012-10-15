@@ -3,7 +3,6 @@ define(function(require){
     var
         $ = require('jquery'),
         _ = require('lodash'),
-        Handlebars = require('handlebars'),
         Backbone = require('backbone');
 
 

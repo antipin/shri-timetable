@@ -16,9 +16,7 @@ define(function(require){
         className: 'row-fluid b-export',
 
 
-        initialize: function() {
-            console.log('import init');
-        },
+        initialize: function() {},
 
 
         render: function() {
@@ -37,7 +35,6 @@ define(function(require){
             e.preventDefault();
 
             var
-                self = this,
                 $form = $(e.target),
                 jsonData = {};
 

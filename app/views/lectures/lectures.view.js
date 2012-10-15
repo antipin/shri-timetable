@@ -15,9 +15,7 @@ define(function(require){
 
         className: 'row-fluid b-lectures',
 
-        initialize: function() {
-            console.log('import init');
-        },
+        initialize: function() {},
 
         render: function() {
             this.$el.html(this.tpl());

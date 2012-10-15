@@ -19,9 +19,7 @@ define(function(require){
 
         vToolbar: new cls_vToolbar(),
 
-        initialize: function() {
-            console.log('header init');
-        },
+        initialize: function() {},
 
         render: function() {
             this.$el.html(this.tpl());

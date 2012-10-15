@@ -3,11 +3,10 @@ if (typeof console == "undefined") { window.console = { log: function () {} }; }
 
 function buildScriptPath(path, version) {
     var
-        chunk_path = path,
-        chunk_version = version != undefined ? "-" + version : "",
-        path = chunk_path + chunk_version;
+        _version = version != undefined ? "-" + version : "",
+        _path = path + _version;
 
-    return App.settings.debug ? path : path + ".min";
+    return App.settings.debug ? _path : _path + ".min";
 }
 
 
