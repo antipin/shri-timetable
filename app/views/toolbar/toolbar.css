@@ -1,0 +1,9 @@
+.b-header-toolbar {
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #333;
+    background-color: #444;
+}
+
+.b-header-toolbar, .b-header-toolbar a {
+    color: #FFF;
+}

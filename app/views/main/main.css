@@ -1,0 +1,5 @@
+.b-app-container {}
+.b-app-container .main-header-wrapper,
+.b-app-container .main-footer-wrapper {
+    z-index: 1000;
+}

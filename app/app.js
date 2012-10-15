@@ -5,6 +5,8 @@ define(function(require){
         $ = require('bootstrap'),
         _ = require('lodash'),
         Backbone = require('backbone'),
+
+        // Utils
         utils = require("utils"),
 
         // Models
@@ -15,9 +17,6 @@ define(function(require){
         // Collections
         cls_cLectures = require("collections/lectures.collection"),
         cls_cSpeakers = require("collections/speakers.collection"),
-
-        // Views
-        cls_vMain = require("views/main/main.view"),
 
         // Router
         cls_Router = require("router");
@@ -41,20 +40,16 @@ define(function(require){
 
             this.cLectures = new cls_cLectures({model: cls_mLecture});
             this.cLectures.fetch();
-            console.log('cLectures.fetch');
-            console.log(this.cLectures.toJSON());
 
             this.cSpeakers = new cls_cSpeakers({model: cls_mSpeaker});
             this.cSpeakers.fetch();
-            console.log('this.cSpeakers.fetch');
-            console.log(this.cSpeakers.toJSON());
-
-            // Init main view
-            this.vMain = new cls_vMain();
 
             // Init router
             this.router = new cls_Router();
 
+            console.log(utils);
+
+            utils.processLinks()
         },
 
         utlis: utils

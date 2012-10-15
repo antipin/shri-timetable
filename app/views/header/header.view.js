@@ -6,14 +6,18 @@ define(function(require){
         Handlebars = require('handlebars'),
         Backbone = require('backbone'),
 
+        cls_vToolbar = require('views/toolbar/toolbar.view'),
+
         tpl =  require('text!views/header/header.tpl.html');
 
 
     return Backbone.View.extend({
 
+        className: 'b-header',
+
         tpl: Handlebars.compile(tpl),
 
-        className: 'row-fluid',
+        vToolbar: new cls_vToolbar(),
 
         initialize: function() {
             console.log('header init');
@@ -21,6 +25,11 @@ define(function(require){
 
         render: function() {
             this.$el.html(this.tpl());
+
+            this.$('.header-toolbar-wrapper').html(
+                this.vToolbar.render().el
+            );
+
             return this;
         }
 

@@ -6,21 +6,21 @@ define(function(require){
         Handlebars = require('handlebars'),
         Backbone = require('backbone'),
 
-        tpl =  require('text!views/footer/footer.tpl.html');
+        tpl =  require('text!views/export/export.tpl.html');
 
 
     return Backbone.View.extend({
 
-        className: 'row-fluid b-footer',
-
         tpl: Handlebars.compile(tpl),
 
-        initialize: function() {},
+        className: 'row-fluid b-export',
+
+        initialize: function() {
+            console.log('import init');
+        },
 
         render: function() {
-            this.$el.html(
-                this.tpl()
-            );
+            this.$el.html(this.tpl());
             return this;
         }
 

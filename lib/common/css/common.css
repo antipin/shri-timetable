@@ -1,58 +1,32 @@
-/** Layout
+/**
+ *  Layout
  *  ---------------------------------
  */
 
-html, body, #app-container, #main-content {
+html, body, .app-container, .main-content {
     height: 100%;
 }
 
-#app-container {
+.app-container {
     position: relative;
 }
 
-#main-header {
-    position: fixed;
-    background-color: #333;
-    top: 0;
-    left: 0;
-    right: 0;
-}
 
-#main-header h1 {
-    margin: 0;
-}
 
-#main-header #toolbar {
-    background-color: #666;
-}
 
-#main-content {
-    margin-top: 120px;
-    margin-bottom: 80px;
-}
 
-#main-content .week {
-    margin-bottom: 30px;
-}
-
-#main-footer {
-    padding: 20px 30px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #e6e6fa;
-}
-
-/** Misc
+/**
+ *  Misc
  *  ---------------------------------
  */
 
 .inner {
-    padding: 10px 20px;
+    padding: 20px;
 }
 
-/** Sprites
+
+/**
+ *  Sprites
  *  ---------------------------------
  */
 .s { background: url("/lib/common/img/s.png") scroll no-repeat 0 0; }
@@ -61,4 +35,4 @@ html, body, #app-container, #main-content {
 
 .s { display: block; overflow: hidden; text-indent: -9999px; }
 
-.s-logo { width: 118px; height: 68px; background-position: 0 0; }
+.s-logo { width: 573px; height: 72px; background-position: 0 0; }

@@ -6,16 +6,14 @@ define(function(require){
 
     return {
 
-        isInstalled: function() {
-
-            // Applications is installed if there are at least one lecture and ond speaker exists
-
-
-            return false;
-        },
-
-        install: function() {
-
+        processLinks: function() {
+            $("body").on("click", 'a[href^="/"]', function(e) {
+                e.preventDefault();
+                App.router.navigate(
+                    $(this).attr('href'),
+                    {trigger: true}
+                );
+            });
         }
 
     }

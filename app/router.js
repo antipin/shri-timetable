@@ -3,11 +3,24 @@ define(function(require){
     var
         $ = require('jquery'),
         _ = require('lodash'),
-        Backbone = require('backbone');
+        Backbone = require('backbone'),
+
+        // Views
+        cls_vMain = require("views/main/main.view"),
+        cls_vLectures = require("views/lectures/lectures.view"),
+        cls_vImport = require("views/import/import.view"),
+        cls_vExport = require("views/export/export.view");
+
 
     return Backbone.Router.extend({
 
         initialize: function() {
+
+            console.log(App);
+
+            // Init main view
+            App.vMain = new cls_vMain();
+
             // Start history monitor
             Backbone.history.start({pushState: true});
         },
@@ -23,11 +36,13 @@ define(function(require){
 
 
         rLectures: function(){
-            console.log('rLectures');
+            console.log('rLecture');
+
         },
 
         rLectures: function(){
             console.log('rLectures');
+            App.vMain.vContentArea.setContent(cls_vLectures);
         },
 
         rLecture: function(lecture){
@@ -36,10 +51,12 @@ define(function(require){
 
         rImport: function(){
             console.log('rImport');
+            App.vMain.vContentArea.setContent(cls_vImport);
         },
 
         rExport: function(){
             console.log('rExport');
+            App.vMain.vContentArea.setContent(cls_vExport);
         }
 
     });

@@ -13,7 +13,7 @@ define(function(require){
 
         tpl: Handlebars.compile(tpl),
 
-        className: 'row-fluid',
+        className: 'row-fluid b-header-toolbar',
 
         initialize: function() {},
 
