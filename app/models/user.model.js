@@ -6,6 +6,7 @@ define(function(require){
 
         defaults: function() {
             return {
+                id: 1,
                 role : "admin"
             }
         },

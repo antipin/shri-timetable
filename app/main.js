@@ -25,7 +25,7 @@ require.config({
     paths: {
 
         // Libs
-        "text":                     buildScriptPath("../lib/require/text",                           "2.0.3"),
+        "text":                     buildScriptPath("../lib/requirejs/text",                         "2.0.3"),
         "jquery":                   buildScriptPath("../lib/jquery/jquery",                          "1.8.2"),
         "handlebars":               buildScriptPath("../lib/handlebars/handlebars",                  "1.0.rc.1"),
         "lodash":                   buildScriptPath("../lib/backbone/lodash",                        "0.8.2"),
