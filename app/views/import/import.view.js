@@ -45,6 +45,13 @@ define(function(require){
             if (rawData != '') {
                 try {
                     jsonData = JSON.parse(rawData);
+                } catch (e) {
+                    alert("Данные имеют неверный формат.");
+                }
+
+                console.log(jsonData);
+
+                if (jsonData != "") {
 
                     if (confirm("ВНИМАНИЕ!\nВсе текщие данные будут утеряны!\nПродолжить импорт?")) {
 
@@ -60,11 +67,8 @@ define(function(require){
                         App.router.navigate('/', {trigger: true});
 
                     }
-
-                } catch (e) {
-                    console.log(e);
-                    alert("Данные имеют неверный формат.");
                 }
+
             }
             else {
                 alert("Введите данные.");

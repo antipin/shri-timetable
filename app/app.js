@@ -38,18 +38,16 @@ define(function(require){
                 }
             });
 
-            this.cLectures = new cls_cLectures({model: cls_mLecture});
+            this.cLectures = new cls_cLectures();
             this.cLectures.fetch();
 
-            this.cSpeakers = new cls_cSpeakers({model: cls_mSpeaker});
+            this.cSpeakers = new cls_cSpeakers();
             this.cSpeakers.fetch();
 
             // Init router
             this.router = new cls_Router();
 
-            console.log(utils);
-
-            utils.processLinks()
+            utils.processLinks();
         },
 
         utlis: utils

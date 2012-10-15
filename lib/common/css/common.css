@@ -11,9 +11,23 @@ html, body, .app-container, .main-content {
     position: relative;
 }
 
+/**
+ *  Nav
+ *  ---------------------------------
+ */
+ul.menu-horizontal, ul.menu-horizontal li {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+ul.menu-horizontal li {
+    display: inline-block;
+}
 
-
-
+ul.menu-horizontal li a {
+    display: block;
+}
 
 /**
  *  Misc

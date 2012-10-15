@@ -14,7 +14,7 @@ define(function(require){
 
 
         url: function() {
-            return 'speakers/' + this.id;
+            return 'speakers/' + this.get("id");
         }
 
     });

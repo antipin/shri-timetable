@@ -6,4 +6,32 @@
 
 .b-header-toolbar, .b-header-toolbar a {
     color: #FFF;
+    font-size: 12px;
+}
+
+.b-header-toolbar ul.menu-horizontal li a {
+    padding: 6px 10px;
+    text-shadow: -1px -1px 0 rgba(0,0,0,.4);
+    color: #AAA;
+}
+
+.b-header-toolbar ul.menu-horizontal li a:hover {
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.b-header-toolbar ul.menu-horizontal li {
+    border-right: 1px solid #333;
+}
+
+.b-header-toolbar ul.menu-horizontal li a {
+    border-right: 1px solid #555;
+}
+
+.b-header-toolbar ul.menu-horizontal li:first-child {
+    border-left: 1px solid #333;
+}
+
+.b-header-toolbar ul.menu-horizontal li:first-child a {
+    border-left: 1px solid #555;
 }

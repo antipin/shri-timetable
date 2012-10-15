@@ -16,8 +16,6 @@ define(function(require){
 
         initialize: function() {
 
-            console.log(App);
-
             // Init main view
             App.vMain = new cls_vMain();
 
@@ -31,9 +29,14 @@ define(function(require){
             "lectures":                  "rLectures",
             "lectures/:lecture":         "rLecture",
             "import":                    "rImport",
-            "export":                    "rExport"
+            "export":                    "rExport",
+            "rml":               "rTestr"
         },
 
+        rTestr: function() {
+            App.cLectures.destroy();
+            App.cSpeakers.destroy();
+        },
 
         rLectures: function(){
             console.log('rLecture');
