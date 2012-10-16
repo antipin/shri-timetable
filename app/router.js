@@ -27,15 +27,38 @@ define(function(require){
         routes: {
             "":                          "rLectures",
             "lectures":                  "rLectures",
+            "lectures/add":              "rLectureAdd",
             "lectures/:lecture":         "rLecture",
             "lectures/:lecture/edit":    "rLectureEdit",
             "import":                    "rImport",
             "export":                    "rExport"
         },
 
+
         rLectures: function() {
             App.vMain.vContentArea.setContent(cls_vLectures);
+
+            App.vMain.vHeader.vToolbar.setNav([
+                {
+                    title: "Добавить лекцию",
+                    href: "/lectures/add"
+                }
+            ]);
         },
+
+        rLectureAdd: function() {
+
+            App.vMain.vContentArea.setContent(cls_vFullLecture, {mode: "create"});
+
+            App.vMain.vHeader.vToolbar.setNav([
+                {
+                    title: "← К расписанию",
+                    href: "/lectures"
+                }
+            ]);
+
+        },
+
 
         rLecture: function(lecture) {
             var mLecture = App.cLectures.get(lecture);
@@ -57,6 +80,7 @@ define(function(require){
                 this.navigate('/', {trigger: true});
             }
         },
+
 
         rLectureEdit: function(lecture) {
             var mLecture = App.cLectures.get(lecture);
@@ -80,9 +104,11 @@ define(function(require){
             }
         },
 
+
         rImport: function() {
             App.vMain.vContentArea.setContent(cls_vImport);
         },
+
 
         rExport: function() {
             App.vMain.vContentArea.setContent(cls_vExport);

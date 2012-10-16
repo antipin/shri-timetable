@@ -6,6 +6,8 @@ define(function(require){
         Handlebars = require('handlebars'),
         Backbone = require('backbone'),
 
+        cls_mLecture = require("models/lecture.model"),
+
         tpl_view =  require('text!views/lecture-full/lecture-full.tpl.html'),
         tpl_edit =  require('text!views/lecture-full/lecture-full-edit.tpl.html');
 
@@ -25,12 +27,23 @@ define(function(require){
 
         initialize: function() {
 
-            this.model = this.options.model;
             this.mode = this.options.mode != undefined ? this.options.mode : "view";
 
-            if (this.model !== undefined) {
-                this.model.on("change", this.render, this);
+            switch(this.mode) {
+
+                case "view":
+                case "edit":
+                    this.model = this.options.model;
+                    this.model.on("change", this.render, this);
+                    break;
+
+                case "create":
+                    this.model = new cls_mLecture();
+                    this.render();
+                    break;
             }
+
+            this.model.on("change", this.render, this);
         },
 
 
@@ -47,6 +60,12 @@ define(function(require){
                 case "edit" :
                     this.$el.html(
                         this.tpl_edit(this.prepareTemplateData())
+                    );
+                    break;
+
+                case "create" :
+                    this.$el.html(
+                        this.tpl_edit(this.model.toJSON())
                     );
                     break;
 
@@ -88,9 +107,37 @@ define(function(require){
                 $form = $(e.target),
                 formJSON = App.utlis.serialize2json($form);
 
-            this.model.save(formJSON);
 
-            App.router.navigate("lectures/" + this.model.get("id"), {trigger: true});
+            switch(this.mode) {
+
+                case "edit" :
+                    this.model.save(formJSON);
+                    App.router.navigate("lectures/" + this.model.get("id"), {trigger: true});
+                    break;
+
+                case "create" :
+
+                    var is_error = false;
+
+                    this.model.save(formJSON, {
+                        success: function(model) {
+                            // TODO: Succes don't call
+                            //App.router.navigate("lectures/" + this.model.get("id"), {trigger: true});
+                        },
+                        error: function(model, errors) {
+                            is_error = true;
+                            alert(errors.join("\n\n"));
+                        }
+                    });
+
+                    // Ugly hack :( No time for digging
+                    if (!is_error) {
+                        // TODO: find out why days rebuilds incorrectly after import (F5 helps)
+                        window.location.href = "/lectures/" + this.model.get("id");
+                    }
+                    break;
+
+            }
 
         }
 

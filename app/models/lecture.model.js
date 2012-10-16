@@ -32,8 +32,31 @@ define(function(require){
         },
 
 
+        validate: function(attrs) {
+
+            var errors = [];
+
+            if (attrs.title === "") {
+                errors.push("Название лекции не может быть пустым");
+            }
+
+            if (attrs.date === "") {
+                errors.push("Укажите дату");
+            }
+
+            try {
+                this.processDateTime(attrs.date);
+            }
+            catch(e) {
+                errors.push("Неверный формат даты");
+            }
+
+            if (errors.length > 0) return errors;
+
+        },
+
+
         update: function() {
-            console.log('Date changed');
             this.set(
                 this.parse(this.toJSON())
             );
@@ -46,7 +69,9 @@ define(function(require){
 
 
         parse: function(data) {
-            data = _.extend(data, this.processDateTime(data.date));
+            if (data.date != undefined) {
+                data = _.extend(data, this.processDateTime(data.date));
+            }
             return data;
         },
 

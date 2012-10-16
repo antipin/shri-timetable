@@ -27,6 +27,10 @@ define(function(require){
             this.vLectures = [];
             this.vDays = [];
             this.dayLine = {};
+
+            if (App.vLectures != undefined) {
+                App.vLectures.on("change", this.render, this);
+            }
         },
 
         render: function() {
