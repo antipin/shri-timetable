@@ -6,15 +6,18 @@ define(function(require){
         Handlebars = require('handlebars'),
         Backbone = require('backbone'),
 
-        tpl =  require('text!views/lecture-full/lecture-full.tpl.html');
+        tpl_view =  require('text!views/lecture-full/lecture-full.tpl.html'),
+        tpl_edit =  require('text!views/lecture-full/lecture-full-edit.tpl.html');
 
 
     return Backbone.View.extend({
 
-        tpl: Handlebars.compile(tpl),
+        tpl_view: Handlebars.compile(tpl_view),
+        tpl_edit: Handlebars.compile(tpl_edit),
 
         className: 'b-lecture-full row-fluid',
 
+        mode: "",
 
         txt_week_days: ["Воскресение", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
         txt_months: ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"],
@@ -23,6 +26,7 @@ define(function(require){
         initialize: function() {
 
             this.model = this.options.model;
+            this.mode = this.options.mode != undefined ? this.options.mode : "view";
 
             if (this.model !== undefined) {
                 this.model.on("change", this.render, this);
@@ -31,14 +35,29 @@ define(function(require){
 
 
         render: function() {
-            this.$el.html(this.tpl(this.prepareTemplateData()));
+
+            switch(this.mode) {
+
+                case "view" :
+                    this.$el.html(
+                        this.tpl_view(this.prepareTemplateData())
+                    );
+                    break;
+
+                case "edit" :
+                    this.$el.html(
+                        this.tpl_edit(this.prepareTemplateData())
+                    );
+                    break;
+
+            }
+
+
             return this;
         },
 
 
         prepareTemplateData: function() {
-
-            console.log(this.model.toJSON());
 
             var
                 data = this.model.toJSON(),
@@ -52,16 +71,6 @@ define(function(require){
             data.time_end = data._time_end;
 
             return data;
-        },
-
-
-        events: {
-            "click": "hGoToDetails"
-        },
-
-
-        hGoToDetails: function() {
-            App.router.navigate("lectures/" + this.model.get("id"), {trigger: true});
         }
 
     });

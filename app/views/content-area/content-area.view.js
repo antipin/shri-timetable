@@ -28,36 +28,32 @@ define(function(require){
         },
 
 
-        setContent: function(viewClass, model) {
+        setContent: function(viewClass, options) {
 
             var self = this;
 
-
+            // Flush nav
+            App.vMain.vHeader.vToolbar.setNav([]);
 
             // Remove old layout
             if (this.vContent != null) {
                 this.$inner.fadeOut('fast', function(){
                     self.vContent.remove();
-                    self.setNewContent(viewClass, model);
+                    self.setNewContent(viewClass, options);
                 });
             }
             else {
-                this.setNewContent(viewClass, model);
+                this.setNewContent(viewClass, options);
             }
 
         },
 
 
-        setNewContent: function(viewClass, model) {
+        setNewContent: function(viewClass, options) {
 
             this.$inner.hide();
 
-            var params = {}
-            if (model != undefined) {
-                params.model = model
-            }
-
-            this.vContent = new viewClass(params);
+            this.vContent = new viewClass(options);
             this.$inner.html(
                 this.vContent.render().el
             );

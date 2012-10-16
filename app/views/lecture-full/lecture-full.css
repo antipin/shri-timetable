@@ -39,3 +39,8 @@
     margin-top: 20px;
     padding: 10px;
 }
+
+
+.b-lecture-full .lecture-links.well {
+    margin-left: 0;
+}
