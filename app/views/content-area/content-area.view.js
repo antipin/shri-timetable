@@ -8,7 +8,9 @@ define(function(require){
 
     return Backbone.View.extend({
 
-        className: "b-content-area",
+        tagName: 'section',
+
+        className: "b-content-area page-section-wrapper",
 
         tpl: '<div class="content-area-inner"></div>',
 
@@ -32,8 +34,10 @@ define(function(require){
 
             // Remove old layout
             if (this.vContent != null) {
-                self.vContent.remove();
-                self.setNewContent(viewClass);
+                this.$inner.fadeOut('fast', function(){
+                    self.vContent.remove();
+                    self.setNewContent(viewClass);
+                });
             }
             else {
                 this.setNewContent(viewClass);

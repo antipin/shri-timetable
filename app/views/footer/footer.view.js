@@ -11,7 +11,9 @@ define(function(require){
 
     return Backbone.View.extend({
 
-        className: 'row-fluid b-footer',
+        tagName: "footer",
+
+        className: 'b-footer',
 
         tpl: Handlebars.compile(tpl),
 

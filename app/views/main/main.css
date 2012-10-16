@@ -1,5 +1,28 @@
-.b-app-container {}
-.b-app-container .main-header-wrapper,
-.b-app-container .main-footer-wrapper {
-    z-index: 1000;
+.b-app-container {
+    min-width: 960px;
+}
+
+.b-app-container .page-section-wrapper {
+    margin: 0 auto;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    .b-app-container .page-section-wrapper {
+        width: 80%;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 980px) and (max-width: 1199px) {
+    .b-app-container .page-section-wrapper {
+        width: 90%;
+    }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    .b-app-container .page-section-wrapper {
+        width: 96%;
+    }
 }

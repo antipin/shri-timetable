@@ -3,11 +3,11 @@
  *  ---------------------------------
  */
 
-html, body, .app-container, .main-content {
+html, body, .b-app-container {
     height: 100%;
 }
 
-.app-container {
+.b-app-container {
     position: relative;
 }
 
@@ -50,3 +50,26 @@ ul.menu-horizontal li a {
 .s { display: block; overflow: hidden; text-indent: -9999px; }
 
 .s-logo { width: 573px; height: 72px; background-position: 0 0; }
+
+
+
+/**
+ *  Scroll bar for safari & chrome
+ *  ---------------------------------
+ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #EFEFEF;
+    border-radius: 4px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar-thumb:vertical,
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: #CCC;
+    -webkit-border-radius: 4px;
+}

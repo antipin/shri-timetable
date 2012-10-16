@@ -1,17 +1,27 @@
 .b-header {
     position: fixed;
-    background-color: #333;
+    z-index: 110;
     top: 0;
     left: 0;
     right: 0;
     box-shadow: 0 0 3px 1px rgba(0,0,0,1);
 }
 
-.b-header h1 {
+.b-header .header-content-wrapper {
+    background-color: #333;
+    border-bottom: 1px solid #222;
+}
+.b-header .header-content-wrapper h1 {
     margin: 0;
 }
 
+.b-header .header-toolbar-wrapper {
+    background-color: #444;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #333;
+}
+
 .b-header .header-content {
-    border-bottom: 1px solid #222;
+    padding: 20px 0;
 }
 

@@ -13,6 +13,8 @@ define(function(require){
 
     return Backbone.View.extend({
 
+        tagName: "header",
+
         className: 'b-header',
 
         tpl: Handlebars.compile(tpl),
@@ -24,7 +26,7 @@ define(function(require){
         render: function() {
             this.$el.html(this.tpl());
 
-            this.$('.header-toolbar-wrapper').html(
+            this.$('.header-toolbar-wrapper > .page-section-wrapper').html(
                 this.vToolbar.render().el
             );
 

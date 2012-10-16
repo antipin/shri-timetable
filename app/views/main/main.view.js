@@ -9,9 +9,7 @@ define(function(require){
         // Child views
         cls_vHeader         = require('views/header/header.view'),
         cls_vContentArea    = require('views/content-area/content-area.view'),
-        cls_vFooter         = require('views/footer/footer.view'),
-
-        tpl =  require('text!views/main/main.tpl.html');
+        cls_vFooter         = require('views/footer/footer.view');
 
 
     return Backbone.View.extend({
@@ -22,24 +20,24 @@ define(function(require){
         vContentArea: new cls_vContentArea(),
         vFooter: new cls_vFooter(),
 
-        tpl: tpl,
-
         initialize: function() {
             this.render();
         },
 
         render: function() {
 
-            this.$el.html(this.tpl);
-
-            // Render and insert child views
-            this.$('.main-header-wrapper').html(
+            // Prepend header
+            this.$el.prepend(
                 this.vHeader.render().el
             );
-            this.$('.main-content-wrapper').html(
+
+            // Append content area
+            this.$el.append(
                 this.vContentArea.render().el
             );
-            this.$('.main-footer-wrapper').html(
+
+            // Append footer
+            this.$el.append(
                 this.vFooter.render().el
             );
 

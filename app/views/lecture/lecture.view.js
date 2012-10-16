@@ -15,12 +15,14 @@ define(function(require){
 
         className: 'b-lecture',
 
+
         initialize: function() {
 
             this.model = this.options.model;
 
             this.model.on("change", this.render, this);
         },
+
 
         render: function() {
             this.$el.html(this.tpl(this.prepareTemplateData()));

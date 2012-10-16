@@ -1,5 +1,6 @@
 .b-footer {
     position: fixed;
+    z-index: 100;
     bottom: 0;
     left: 0;
     right: 0;
@@ -11,8 +12,8 @@
     box-shadow: 0 0 3px 1px rgba(0,0,0,.1);
 }
 
-.b-footer .inner {
-    padding: 5px;
+.b-footer .row-fluid {
+    padding-top: 8px;
 }
 
 
