@@ -21,6 +21,9 @@ define(function(require){
         mLectures: [],
         $lectures: null,
 
+        txt_week_days: ["Воскресение", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+        txt_months: ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"],
+
         initialize: function() {
 
             this.model = this.options.model;
@@ -38,7 +41,7 @@ define(function(require){
             );
 
             // Cache placeholders
-            this.$lectures = this.$('.day-lectures-wrapper');
+            this.$lectures = this.$('.day-lectures');
 
             // Create lecture views
             _.each(this.mLectures, function(mLecture){
@@ -49,18 +52,37 @@ define(function(require){
 
             // Render lecture views
             _.each(this.vLectures, function(vLecture) {
+                console.log(this.getDurationClass(vLecture));
                 this.$lectures.append(
-                    vLecture.render().el
+                    vLecture.render()
+                        .$el
+                        .addClass(this.getDurationClass(vLecture))
                 )
             }, this);
+
+            if (this.mLectures.length === 0) {
+                this.$el.addClass('empty');
+            }
 
             return this;
         },
 
 
+        getDurationClass: function(vLecture) {
+            return 'span' + parseInt(vLecture.model.get('_duration')) * 3;
+        },
+
+
         prepareTemplateData: function() {
 
-            jsonData = this.model.toJSON()
+            var
+                jsonData = this.model.toJSON(),
+                dayDate = jsonData.date;
+
+            jsonData.month_day = dayDate.getDate();
+            jsonData.week_day = this.txt_week_days[dayDate.getDay()];
+            jsonData.month = this.txt_months[dayDate.getMonth()];
+
 
             return jsonData;
         }

@@ -1,5 +1,12 @@
 .b-day {
-    border: 1px solid #DDD;
     padding: 10px;
     margin-bottom: 20px;
+}
+
+.b-day.empty .day-date {
+    color: #DDD;
+}
+
+.b-day .b-lecture {
+    height: 100px;
 }

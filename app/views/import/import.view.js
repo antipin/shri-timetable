@@ -60,7 +60,9 @@ define(function(require){
                                 "Докладчиков: " + speakers_count
                         );
 
-                        App.router.navigate('/', {trigger: true});
+                        // TODO: find out why days rebuilds incorrectly after import (F5 helps)
+                        //App.router.navigate('/', {trigger: true});
+                        window.location.href = "/"
 
                     }
                 }

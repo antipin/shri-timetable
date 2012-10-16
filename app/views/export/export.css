@@ -2,3 +2,7 @@
 .b-export textarea.export-json {
     display: none;
 }
+
+.b-export .help-block {
+    margin-bottom: 1em;
+}
