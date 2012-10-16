@@ -13,8 +13,8 @@ define(function(require){
             return 'lectures';
         },
 
-        comparator: function(chapter) {
-            return chapter.get('_date');
+        comparator: function(model) {
+            return model.get('_date');
         }
 
     });

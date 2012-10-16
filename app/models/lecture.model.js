@@ -4,6 +4,8 @@ define(function(require){
 
     return Backbone.Model.extend({
 
+        msInDay: 1000 * 60 * 60 * 24,
+
         defaults: function() {
             return {
                 // DB properties
@@ -18,6 +20,7 @@ define(function(require){
                 link_github: "",
                 // Calcilated properties (frontend use only)
                 _date: null,
+                _absDay: 0,
                 _duration: 0,
                 _time_start: "",
                 _time_end: ""
@@ -59,6 +62,8 @@ define(function(require){
 
             result._duration = _int_time_end - _int_time_start;
 
+            result._absDay = Date.parse(dmy.month + '/' + dmy.day + '/' + dmy.year + ' 00:00 GMT+0000') / this.msInDay;
+
             return result;
         },
 
@@ -69,6 +74,7 @@ define(function(require){
 
             delete result.id;
             delete result._date;
+            delete result._absDay;
             delete result._duration;
             delete result._time_start;
             delete result._time_end;

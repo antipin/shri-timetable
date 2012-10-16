@@ -6,7 +6,7 @@ define(function(require){
         Handlebars = require('handlebars'),
         Backbone = require('backbone'),
 
-        cls_vLecture = require('views/lecture/lecture.view'),
+        cls_vDay = require('views/day/day.view'),
 
         tpl =  require('text!views/lectures/lectures.tpl.html'),
         tpl_empty =  require('text!views/lectures/lectures-empty.tpl.html');
@@ -21,9 +21,12 @@ define(function(require){
         className: 'row-fluid b-lectures',
 
         vLectures: null,
+        vDays: null,
 
         initialize: function() {
             this.vLectures = [];
+            this.vDays = [];
+            this.dayLine = {};
         },
 
         render: function() {
@@ -36,15 +39,15 @@ define(function(require){
 
             else {
 
-                App.cLectures.each(function(mLecture) {
-                    this.vLectures.push(
-                        new cls_vLecture({model: mLecture})
+                App.cDays.each(function(mDay) {
+                    this.vDays.push(
+                        new cls_vDay({model: mDay})
                     );
                 }, this);
 
-                _.each(this.vLectures, function(vLecture) {
+                _.each(this.vDays, function(vDay) {
                     this.$el.append(
-                        vLecture.render().el
+                        vDay.render().el
                     )
                 }, this);
 
@@ -52,6 +55,7 @@ define(function(require){
 
             return this;
         }
+
 
 
     });

@@ -1,4 +1,45 @@
 /**
+ * Typography
+ */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzJ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTZ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hp1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/K88pR3goAWT7BTt32Z01mz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+textarea {
+    font-family: "Courier New";
+}
+
+
+
+
+/**
  *  Layout
  *  ---------------------------------
  */
@@ -34,15 +75,19 @@ ul.menu-horizontal li a {
  *  ---------------------------------
  */
 
-.inner {
-    padding: 20px;
+.inner { padding: 20px; }
+.well h2,.well h3, .well h4, .well h5 {
+    margin-top: 0;
+    padding-bottom: .4em;
+    margin-bottom: .8em;
+    border-bottom: 1px solid #DDD;
 }
 
 
-/**
- *  Sprites
- *  ---------------------------------
- */
+    /**
+     *  Sprites
+     *  ---------------------------------
+     */
 .s { background: url("/lib/common/img/s.png") scroll no-repeat 0 0; }
 .sx { background: url("/lib/common/img/sx.png") scroll repeat-x 0 0; }
 .sy { background: url("/lib/common/img/sy.png") scroll repeat-y 0 0; }
@@ -57,7 +102,6 @@ ul.menu-horizontal li a {
  *  Scroll bar for safari & chrome
  *  ---------------------------------
  */
-
 ::-webkit-scrollbar {
     width: 8px;
 }

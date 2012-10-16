@@ -31,7 +31,7 @@ define(function(require){
 
 
         prepareTemplateData: function() {
-            console.log(this.model.toJSON());
+            //console.log(this.model.get('_absDay') + " ---> " + this.model.get('title'));
             return this.model.toJSON();
         }
 

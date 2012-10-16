@@ -13,6 +13,7 @@ define(function(require){
         cls_mUser = require("models/user.model"),
 
         // Collections
+        cls_cDays = require("collections/days.collection"),
         cls_cLectures = require("collections/lectures.collection"),
         cls_cSpeakers = require("collections/speakers.collection"),
 
@@ -36,10 +37,14 @@ define(function(require){
                 }
             });
 
-            this.cLectures = new cls_cLectures();
-            this.cLectures.fetch();
 
+            // Create collections
+            this.cLectures = new cls_cLectures();
             this.cSpeakers = new cls_cSpeakers();
+            this.cDays = new cls_cDays();
+
+            // Fetch data
+            this.cLectures.fetch();
             this.cSpeakers.fetch();
 
             // Init router
