@@ -68,9 +68,14 @@ define(function(require){
                         this.tpl_edit(this.model.toJSON())
                     );
                     break;
-
             }
 
+            // Typeahead for speakers
+            if (this.mode == "create" || this.mode == "create") {
+                this.$("input[name='speaker']").typeahead({
+                    source: App.cSpeakers.pluck("name")
+                });
+            }
 
             return this;
         },
