@@ -24,6 +24,9 @@ define(function(require){
         txt_week_days: ["Воскресение", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
         txt_months: ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"],
 
+        // TODO: if there will be more than 3 lecture per day, layout will be fucked up. Fix it!
+        max_duration: 3,
+
         initialize: function() {
 
             this.model = this.options.model;
@@ -69,7 +72,7 @@ define(function(require){
 
 
         getDurationClass: function(vLecture) {
-            return 'span' + parseInt(vLecture.model.get('_duration')) * 3;
+            return 'span' + parseInt(vLecture.model.get('_duration')) * (12 / this.max_duration);
         },
 
 

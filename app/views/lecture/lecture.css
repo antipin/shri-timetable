@@ -1,5 +1,36 @@
 .b-lecture {
-    border: 1px solid #DDD;
     padding: 10px;
+    border: 1px solid transparent;
     margin-bottom: 20px;
+}
+
+.b-lecture .lecture-block {
+    height: 100px;
+}
+
+.b-lecture .lecture-time {
+    position: relative;
+    font-size: 10px;
+    color: #CCC;
+    height: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #CCC;
+}
+
+.b-lecture .lecture-time .start,
+.b-lecture .lecture-time .end {
+    display: block;
+    position: absolute;
+    top: 0;
+    background-color: #FFF;
+}
+
+.b-lecture .lecture-time .start {
+    left: 0;
+    padding-right: 10px;
+}
+
+.b-lecture .lecture-time .end {
+    right: 0;
+    padding-left: 10px;
 }

@@ -31,8 +31,14 @@ define(function(require){
 
 
         prepareTemplateData: function() {
-            //console.log(this.model.get('_absDay') + " ---> " + this.model.get('title'));
-            return this.model.toJSON();
+
+            var data = this.model.toJSON();
+            console.log(this.model.toJSON());
+
+            data.time_start = data._time_start;
+            data.time_end = data._time_end;
+
+            return data;
         }
 
     });

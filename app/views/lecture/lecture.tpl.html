@@ -1,9 +1,16 @@
-<h4>{{title}}</h4>
+<div class="lecture-time">
+    <span class="start">{{time_start}}</span>
+    <span class="end">{{time_end}}</span>
+</div>
 
-{{#if desription}}
-<div class="lecture-description">{{desription}}</div>
-{{/if}}
+<div class="lecture-block">
+    <h4>{{title}}</h4>
 
-{{#if speaker}}
-<small class="lecture-speaker">{{speaker}}</small>
-{{/if}}
+    {{#if desription}}
+    <div class="lecture-description">{{desription}}</div>
+    {{/if}}
+
+    {{#if speaker}}
+    <small class="lecture-speaker">{{speaker}}</small>
+    {{/if}}
+</div>
