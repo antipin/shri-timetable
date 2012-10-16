@@ -27,6 +27,19 @@ define(function(require){
         },
 
 
+        initialize: function() {
+            this.on('change:date', this.update, this);
+        },
+
+
+        update: function() {
+            console.log('Date changed');
+            this.set(
+                this.parse(this.toJSON())
+            );
+        },
+
+
         url: function() {
             return 'lectures/' + this.get("id");
         },

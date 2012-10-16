@@ -14,6 +14,17 @@ define(function(require){
                     {trigger: true}
                 );
             });
+        },
+
+
+        serialize2json: function($form) {
+            var
+                json = {},
+                formData = $form.serializeArray();
+            _.each(formData, function(param){
+                json[param.name] = param.value;
+            }, this);
+            return json;
         }
 
     }

@@ -71,6 +71,27 @@ define(function(require){
             data.time_end = data._time_end;
 
             return data;
+        },
+
+
+        events: {
+            "submit form.lecture-full-edit": "hSubmitLecture"
+        },
+
+
+        hSubmitLecture: function(e) {
+
+            e.preventDefault();
+
+            var
+                self = this,
+                $form = $(e.target),
+                formJSON = App.utlis.serialize2json($form);
+
+            this.model.save(formJSON);
+
+            App.router.navigate("lectures/" + this.model.get("id"), {trigger: true});
+
         }
 
     });
