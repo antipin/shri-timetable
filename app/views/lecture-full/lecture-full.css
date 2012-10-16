@@ -1,0 +1,41 @@
+.b-lecture-full {
+    margin-top: 20px;
+}
+
+.b-lecture-full .lecture-time {
+    position: relative;
+    font-size: 10px;
+    color: #CCC;
+    height: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #CCC;
+    width: 50%;
+}
+
+.b-lecture-full .lecture-time .start,
+.b-lecture-full .lecture-time .end {
+    display: block;
+    position: absolute;
+    top: 0;
+    background-color: #FFF;
+}
+
+.b-lecture-full .lecture-time .start {
+    left: 0;
+    padding-right: 10px;
+}
+
+.b-lecture-full .lecture-time .end {
+    right: 0;
+    padding-left: 10px;
+}
+
+
+.b-lecture-full .lecture-date h4 {
+    margin-bottom: 0;
+}
+
+.b-lecture-full .links {
+    margin-top: 20px;
+    padding: 10px;
+}

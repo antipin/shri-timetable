@@ -3,10 +3,22 @@
     margin-bottom: 20px;
 }
 
-.b-day.empty .day-date {
-    color: #DDD;
+
+
+.b-day .day-date h3 {
+    margin-top: 25px;
+    margin-bottom: 2px;
+    font-size: 26px;
+    font-weight: 400;
 }
 
-.b-day .b-lecture {
-    height: 100px;
+.b-day .day-date small {
+    color: #888;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.b-day.empty .day-date small,
+.b-day.empty .day-date {
+    color: #DDD;
 }

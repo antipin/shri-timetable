@@ -12,7 +12,6 @@ define(function(require){
                 title: "",
                 description: "",
                 date: "",
-                time: "",
                 speaker: "",
                 link_presentation: "",
                 link_video_online: "",

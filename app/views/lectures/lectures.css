@@ -1,1 +1,6 @@
 .b-lectures {}
+.b-lectures .current-week {
+    text-align: center;
+    margin: 2em 0;
+    font-size: 36px;
+}

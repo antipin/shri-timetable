@@ -2,6 +2,11 @@
     padding: 10px;
     border: 1px solid transparent;
     margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.b-lecture:hover {
+    border: 1px solid #EEE;
 }
 
 .b-lecture .lecture-block {

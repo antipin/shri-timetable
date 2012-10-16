@@ -45,7 +45,14 @@ define(function(require){
                     );
                 }, this);
 
+                var current_week = 0;
                 _.each(this.vDays, function(vDay) {
+
+                    if(vDay.model.get('date').getDay() === 1) {
+                        current_week++;
+                        this.$el.append('<h3 class="current-week">Неделя ' + current_week + '</h3>');
+                    }
+
                     this.$el.append(
                         vDay.render().el
                     )

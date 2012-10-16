@@ -1,0 +1,43 @@
+<div class="span2 offset1">
+    <div class="lecture-date">
+        <h4>{{week_day}}</h4>
+        <small>{{month_day}} {{month}}</small>
+    </div>
+    <div class="lecture-time">
+        <span class="start">{{time_start}}</span>
+        <span class="end">{{time_end}}</span>
+    </div>
+</div>
+
+<div class="span7">
+
+
+    <div class="row-fluid">
+
+        <div class="span8">
+            <h2>{{title}}</h2>
+        </div>
+
+        <div class="span4">
+            {{#if speaker}}
+            <small class="lecture-speaker">{{speaker}}</small>
+            {{/if}}
+        </div>
+
+    </div>
+
+    {{#if description}}
+    <div class="row-fluid">
+        <div class="span8 lecture-description">{{description}}</div>
+    </div>
+    {{/if}}
+
+
+    <ul class="links">
+        {{#if link_github}}<li>GitHub<a href="{{link_github}}">{{link_github}}</a></li>{{/if}}
+        {{#if link_presentation}}<li>Презентация: <a href="{{link_presentation}}">{{link_presentation}}</a></li>{{/if}}
+        {{#if link_video_online}}<li>Видео: <a href="{{link_video_online}}">{{link_video_online}}</a></li>{{/if}}
+        {{#if link_video_download}}<li>Видео: <a href="{{link_video_download}}">{{link_video_download}}</a></li>{{/if}}
+    </ul>
+
+</div>

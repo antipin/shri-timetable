@@ -55,7 +55,6 @@ define(function(require){
 
             // Render lecture views
             _.each(this.vLectures, function(vLecture) {
-                console.log(this.getDurationClass(vLecture));
                 this.$lectures.append(
                     vLecture.render()
                         .$el

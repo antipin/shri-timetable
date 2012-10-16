@@ -7,6 +7,7 @@ define(function(require){
         // Views
         cls_vMain = require("views/main/main.view"),
         cls_vLectures = require("views/lectures/lectures.view"),
+        cls_vFullLecture = require("views/lecture-full/lecture-full.view"),
         cls_vImport = require("views/import/import.view"),
         cls_vExport = require("views/export/export.view");
 
@@ -31,19 +32,20 @@ define(function(require){
             "export":                    "rExport"
         },
 
-        rLectures: function(){
+        rLectures: function() {
             App.vMain.vContentArea.setContent(cls_vLectures);
         },
 
-        rLecture: function(lecture){
-            console.log('rLecture: ' + lecture);
+        rLecture: function(lecture) {
+            var mLecture = App.cLectures.get(lecture);
+            App.vMain.vContentArea.setContent(cls_vFullLecture, mLecture);
         },
 
-        rImport: function(){
+        rImport: function() {
             App.vMain.vContentArea.setContent(cls_vImport);
         },
 
-        rExport: function(){
+        rExport: function() {
             App.vMain.vContentArea.setContent(cls_vExport);
         }
 
