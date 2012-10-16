@@ -51,6 +51,7 @@
             <div class="controls">
                 <input value="{{link_video_download}}" name="link_video_download" type="text"  placeholder="http://...">
             </div>
+        </div>
 
         <div class="control-group">
             <label class="control-label">Ссылка на GitHub</label>
@@ -60,50 +61,13 @@
         </div>
 
 
-        <!--<div class="well lecture-links span10">-->
-
-            <!--<div class="fluid-row">-->
-                <!--<div class="span6">-->
-                    <!--<div class="control-group">-->
-                        <!--<label class="control-label">Ссылка на презентацию</label>-->
-                        <!--<div class="controls">-->
-                            <!--<input value="{{link_presentation}}" type="text" name="link_presentation" placeholder="http://...">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="span6">-->
-                    <!--<div class="control-group">-->
-                        <!--<label class="control-label">Ссылка не видео (просмотр онлайн)</label>-->
-                        <!--<div class="controls">-->
-                            <!--<input value="{{link_video_online}}" name="link_video_online" type="text" placeholder="http://...">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="fluid-row">-->
-                <!--<div class="span6">-->
-                    <!--<div class="control-group">-->
-                        <!--<label class="control-label">Ссылка видо (скачкть)</label>-->
-                        <!--<div class="controls">-->
-                            <!--<input value="{{link_video_download}}" name="link_video_download" type="text"  placeholder="http://...">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="span6">-->
-                    <!--<div class="control-group">-->
-                        <!--<label class="control-label">Ссылка на GitHub</label>-->
-                        <!--<div class="controls">-->
-                            <!--<input value="{{link_github}}" name="link_github" type="text" placeholder="http://...">-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-
-        <!--</div>-->
-
-        <div class="">
-            <button type="submit" class="btn  btn-inverse btn-large">Сохранить</button>
+        <div class="row-fluid">
+            <div class="span3">
+                <button type="submit" name="op" value="edit" class="btn btn-inverse btn-large">Сохранить</button>
+            </div>
+            <div class="span3 offset5">
+                <button  class="btn btn-danger btn-delete">Удалить</button>
+            </div>
         </div>
 
     </form>

@@ -36,6 +36,9 @@ define(function(require){
 
 
         rLectures: function() {
+
+            App.cLectures.fetch();
+
             App.vMain.vContentArea.setContent(cls_vLectures);
 
             App.vMain.vHeader.vToolbar.setNav([

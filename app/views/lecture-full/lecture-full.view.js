@@ -99,7 +99,8 @@ define(function(require){
 
 
         events: {
-            "submit form.lecture-full-edit": "hSubmitLecture"
+            "submit form.lecture-full-edit": "hSubmitLecture",
+            "click form .btn-delete": "hDelete"
         },
 
 
@@ -127,7 +128,6 @@ define(function(require){
                     this.model.save(formJSON, {
                         success: function(model) {
                             // TODO: Succes don't call
-                            //App.router.navigate("lectures/" + this.model.get("id"), {trigger: true});
                         },
                         error: function(model, errors) {
                             is_error = true;
@@ -135,15 +135,22 @@ define(function(require){
                         }
                     });
 
-                    // Ugly hack :( No time for digging
+                    // Ugly hack :( No time for digging why succes do not working
                     if (!is_error) {
-                        // TODO: find out why days rebuilds incorrectly after import (F5 helps)
-                        window.location.href = "/lectures/" + this.model.get("id");
+                        // Go to created item
+                        App.router.navigate("/lectures/" + this.model.get("id"), {trigger: true});
                     }
                     break;
 
             }
 
+        },
+
+
+        hDelete: function(e) {
+            e.preventDefault();
+            this.model.destroy();
+            App.router.navigate("/lectures", {trigger: true});
         }
 
     });
